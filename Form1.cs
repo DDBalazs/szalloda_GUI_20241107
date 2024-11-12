@@ -43,6 +43,15 @@ namespace szalloda_GUI_20241107
             }
             lbvendegejszakak.Text = "Vendégéjszakák száma összesen: " + vendegejszam.ToString();
             lbvendegteljes.Text = "A teljes ellátást igénybevevők száma: "+vendegteljesszam.ToString();
+
+            for (int i = 0; i < lista.Count; i++)
+            {
+                cbejszakak.Items.Add(i + 1).ToString();
+                if (lista[i].Ellatas == "p")
+                {
+                    rttorzsvendek.Text = rttorzsvendek.Text + lista[i].Nev + "\n";
+                }
+            }
         }
         public void vendegejszakakszama()
         {
@@ -66,14 +75,6 @@ namespace szalloda_GUI_20241107
         private void Form1_Load(object sender, EventArgs e)
         {
             betoltes();
-            for (int i = 0; i < 10; i++)
-            {
-                cbejszakak.Items.Add(i + 1).ToString();
-                if (lista[i].Ellatas == "p")
-                {
-                    rttorzsvendek.Text = rttorzsvendek.Text+lista[i].Nev+"\n";
-                }
-            }
         }
 
         private void button2_Click(object sender, EventArgs e)

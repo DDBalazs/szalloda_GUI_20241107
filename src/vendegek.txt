@@ -12,3 +12,5 @@ Kuka;7;3;no
 Margit;7;5;p
 Margát;6;6;p
 Ádám;10;65;fp
+Milán;7;40;no
+Miklós;5;5;fp
